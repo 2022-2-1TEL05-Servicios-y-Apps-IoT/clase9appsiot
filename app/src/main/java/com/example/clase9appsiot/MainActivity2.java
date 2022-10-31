@@ -55,4 +55,8 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
+
+    public void goToUploadActivity(View view){
+        startActivity(new Intent(MainActivity2.this,UploadFilesActivity.class));
+    }
 }

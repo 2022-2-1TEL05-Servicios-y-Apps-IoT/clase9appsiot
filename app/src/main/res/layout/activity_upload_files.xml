@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadFilesActivity">
+
+    <Button
+        android:id="@+id/btnUploadFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="uploadFileBtn"
+        android:text="Subir archivo pdf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="uploadBigFileBtn"
+        android:text="Subir archivo ver progreso"
+        app:layout_constraintEnd_toEndOf="@+id/btnUploadFile"
+        app:layout_constraintStart_toStartOf="@+id/btnUploadFile"
+        app:layout_constraintTop_toBottomOf="@+id/btnUploadFile" />
+
+    <TextView
+        android:id="@+id/textViewProgreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="existeArchivo"
+        android:text="Validar si existe archivo"
+        app:layout_constraintEnd_toEndOf="@+id/textViewProgreso"
+        app:layout_constraintStart_toStartOf="@+id/textViewProgreso"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <EditText
+        android:id="@+id/inputArchivoBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="archivo a buscar"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/inputArchivoBuscar"
+        app:layout_constraintStart_toStartOf="@+id/inputArchivoBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProgreso" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="subirImagen"
+        android:text="Subir imagen"
+        app:layout_constraintEnd_toEndOf="@+id/inputArchivoBuscar"
+        app:layout_constraintStart_toStartOf="@+id/inputArchivoBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/inputArchivoBuscar" />
+
+    <ImageView
+        android:id="@+id/imageViewFromStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="listarArchivos"
+        android:text="listar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
